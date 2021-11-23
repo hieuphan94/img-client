@@ -5,6 +5,7 @@ module.exports = {
     extend: {},
     colors: {
       transparent: "transparent",
+      hoverColor: "#3c3a3aa6",
       black: "#000",
       white: "#fff",
       main: {

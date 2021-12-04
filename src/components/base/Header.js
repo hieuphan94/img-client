@@ -4,41 +4,59 @@ import { AiTwotoneMail } from "react-icons/ai";
 
 export const Header = () => {
   return (
-    <div className="w-full bg-main">
-      <div className="container mx-auto">
-        <div className="menu-top flex justify-between bg-white">
+    <div className="w-full fixed z-30">
+      <div className="mx-auto">
+        <div className="menu-top flex justify-between py-2 px-7 bg-white">
           <div className="menu-top-left flex">
-            <div className="phone flex">
-              <FaPhone />
-              <span>0929 01 07 09</span>
+            <div className="phone flex items-center">
+              <FaPhone className="text-paraGraph" />
+              <span className="mx-5 text-paraGraph">0929 01 07 09</span>
             </div>
-            <div className="email flex">
-              <AiTwotoneMail />
-              <span>info@imagevietnam.com</span>
+            <div className="email flex items-center">
+              <AiTwotoneMail className="text-paraGraph" />
+              <span className="mx-5 text-paraGraph">info@imagevietnam.com</span>
             </div>
           </div>
           <div className="menu-top-right">
             <nav>
               <ul className="flex">
-                <li>Du lịch có trách nhiệm</li>
-                <li>Blog & Tin Tức</li>
-                <li>Về chúng tôi</li>
-                <li>Liên hệ</li>
+                <li className="text-paraGraph mx-4 hover:text-main-light">
+                  Du lịch có trách nhiệm
+                </li>
+                <li className="text-paraGraph mx-4 hover:text-main-light">
+                  Blog & Tin Tức
+                </li>
+                <li className="text-paraGraph mx-4 hover:text-main-light">
+                  Về chúng tôi
+                </li>
+                <li className="text-paraGraph hover:text-main-light">
+                  Liên hệ
+                </li>
               </ul>
             </nav>
           </div>
         </div>
-        <div className="menu-main flex justify-between bg-main-light">
+        <div className="menu-main flex justify-between items-center py-2 px-7 bg-transparentMenu">
           <div className="logo">
-            <img src="" />
+            <img src="/img/logo.png" className="w-40" alt="" />
           </div>
           <nav>
             <ul className="flex">
-              <li>Tour trong nước</li>
-              <li>Tour nước ngoài</li>
-              <li>Du lịch gia đình</li>
-              <li>Events & Team building</li>
-              <li>Combo khuyến mãi</li>
+              <li className="mx-4 font-semibold text-menuColor hover:text-main">
+                Tour trong nước
+              </li>
+              <li className="mx-4 font-semibold text-menuColor hover:text-main">
+                Tour nước ngoài
+              </li>
+              <li className="mx-4 font-semibold text-menuColor hover:text-main">
+                Du lịch gia đình
+              </li>
+              <li className="mx-4 font-semibold text-menuColor hover:text-main">
+                Events & Team building
+              </li>
+              <li className="font-semibold text-menuColor hover:text-main">
+                Combo khuyến mãi
+              </li>
             </ul>
           </nav>
         </div>

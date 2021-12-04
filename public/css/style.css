@@ -1,3 +1,14 @@
 .rec-arrow {
   display: none;
 }
+.each-slide .slide-img-item {
+  height: 45rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-page {
+  height: 32rem;
+  background-size: cover;
+  background-position: bottom;
+}

@@ -2,35 +2,36 @@ import React from "react";
 import { IoFlash, IoTimeOutline } from "react-icons/io5";
 
 export const Box = ({ item }) => {
-  let iconStyles = { color: "red", fontSize: "1.5em" };
+  // let iconStyles = { color: "red", fontSize: "1.5em" };
   return (
-    <div className="">
-      <div className="box-image">
-        <a href="#">
+    <div className="bg-blackThin mx-5 rounded-md hover:bg-main-light">
+      <div className="box-image h-96">
+        <a href={item.url}>
           <img
-            className="h-96"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjzC2JyZDZ_RaWf0qp11K0lcvB6b6kYNMoqtZAQ9hiPZ4cTIOB"
+            className="h-full object-cover rounded-md"
+            src={item.img}
+            alt=""
           />
         </a>
       </div>
-      <div className="box-content">
-        <div className="box-title flex justify-between">
-          <IoFlash style={iconStyles} />
-          <h3 className="font-bold">{item.title}</h3>
+      <div className="box-content py-4 px-8">
+        <div className="box-title flex justify-between py-2">
+          <IoFlash className="text-main text-4xl" />
+          <h3 className="font-bold text-2xl">{item.title}</h3>
         </div>
-        <div className="box-date flex justify-between">
-          <IoTimeOutline />
+        <div className="box-date flex justify-between py-2">
+          <IoTimeOutline className="text-main text-4xl" />
           <h3>{item.day}</h3>
         </div>
-        <div className="box-price flex flex-col items-end">
-          <span>Gia tu</span>
-          <span>{item.price} đ</span>
+        <div className="box-price flex flex-col items-end py-2">
+          <span>Giá từ</span>
+          <span className="text-3xl text-main-dark text-bold">
+            {item.price} đ
+          </span>
         </div>
-        <div className="box-cat absolute top-2/3 mx-3.5">
-          <button className="bg-main px-3 rounded-sm">
-            <a className="text-white" href="#">
-              {item.cat}
-            </a>
+        <div className="box-cat absolute top-2/4 mx-3.5">
+          <button className="bg-main px-3 rounded-sm py-2 text-white">
+            {item.category}
           </button>
         </div>
       </div>

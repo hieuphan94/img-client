@@ -1,18 +1,14 @@
 import React from "react";
 import { AiFillTags } from "react-icons/ai";
 
-export const FormTour = () => {
-  const product = {
-    title: "Tour Tay Bac",
-    price: 3970000,
-  };
+export const FormTour = ({ tour }) => {
   return (
     <div className="px-5 py-5 rounded-md shadow-lg">
-      <h3 className="text-main text-center py-5">{product.title}</h3>
+      <h3 className="text-main text-center py-5">{tour.title}</h3>
       <div className="price flex px-2 m-2">
         <AiFillTags className="text-main text-3xl" />
         <p className="px-5">
-          Giá từ <span className="text-main">{product.price}đ</span>
+          Giá từ <span className="text-main">{tour.price}đ</span>
         </p>
       </div>
       <div className="form">

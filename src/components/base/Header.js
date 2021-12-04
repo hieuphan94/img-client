@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhone } from "react-icons/fa";
 import { AiTwotoneMail } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -38,7 +39,9 @@ export const Header = () => {
         </div>
         <div className="menu-main flex justify-between items-center py-2 px-7 bg-transparentMenu">
           <div className="logo">
-            <img src="/img/logo.png" className="w-40" alt="" />
+            <Link to="/">
+              <img src="/img/logo.png" className="w-40" alt="" />
+            </Link>
           </div>
           <nav>
             <ul className="flex">

@@ -6,11 +6,11 @@ import { FiMail } from "react-icons/fi";
 import { RecommendBar } from "./RecommendBar";
 import { FormTour } from "./FormTour";
 
-export const SideBarTour = () => {
+export const SideBarTour = ({ tour }) => {
   return (
     <div className="sidebar px-5 py-5">
       {/* Tour Form */}
-      <FormTour />
+      <FormTour tour={tour} />
       {/* Search */}
       <div className="sidebar-element search py-5">
         <h3 className="font-bold py-3 my-2">Bạn muốn đi đâu?</h3>

@@ -1,4 +1,4 @@
-import API from "./API";
+import API from "./api";
 
 export const TourAPI = {
   getTour: async (url) => {

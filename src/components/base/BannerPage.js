@@ -1,9 +1,8 @@
 import React from "react";
 
-export const BannerPage = () => {
+export const BannerPage = ({ page }) => {
   const content = {
     img: "img/banner-page.jpeg",
-    text: "Text",
   };
   return (
     <div
@@ -12,7 +11,7 @@ export const BannerPage = () => {
     >
       <div className="mx-auto py-64">
         <h3 className="text-center text-5xl font-bold text-white">
-          {content.text}
+          {page.title}
         </h3>
       </div>
     </div>

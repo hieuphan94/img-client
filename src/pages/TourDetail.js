@@ -16,7 +16,7 @@ export const TourDetail = () => {
   return (
     <div>
       <Header />
-      <BannerPage />
+      <BannerPage page={tour} />
       <div className="page-content flex">
         <div className="w-3/4 page-content-detail py-5 px-5">
           <h3 className="text-center text-main font-bold text-4xl py-5">

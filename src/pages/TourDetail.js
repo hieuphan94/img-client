@@ -5,14 +5,17 @@ import { Header } from "../components/base/Header";
 import { RelatedTour } from "../components/common/RelatedTour";
 import { SideBarTour } from "../components/common/SideBarTour";
 import { TourAPI } from "../data/api/tours";
+import parse from "html-react-parser";
 
-export const TourDetail = () => {
-  const [tour, setTour] = useState({});
-  useEffect(() => {
-    (async () => {
-      setTour(await (await TourAPI.getTour("tour-1")).data);
-    })();
-  }, []);
+export const TourDetail = ({ tour }) => {
+  // const [tour, setTour] = useState({});
+  // useEffect(() => {
+  //   (async () => {
+  //     setTour(await (await TourAPI.getTour("tour-1")).data);
+  //   })();
+  // }, []);
+  console.log(tour);
+  console.log(tour.summary);
   return (
     <div>
       <Header />
@@ -22,8 +25,15 @@ export const TourDetail = () => {
           <h3 className="text-center text-main font-bold text-4xl py-5">
             {tour.title}
           </h3>
-          <p className="font-light text-paraGraph px-3">{tour.decs}</p>
-          <div className=""></div>
+          <div className="font-light text-paraGraph px-3">
+            {parse(tour.summary)}
+          </div>
+          <div>{tour.category}</div>
+          <div>
+            {tour.timeline.map((e) => {
+              return <div>{e.title}</div>;
+            })}
+          </div>
           <RelatedTour />
         </div>
         <div className="w-1/4">

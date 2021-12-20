@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhone, FaFacebook, FaYoutube } from "react-icons/fa";
 import { FiInstagram, FiMapPin, FiMail } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -55,6 +56,12 @@ export const Footer = () => {
               <li className="text-white hover:text-main py-2">
                 Chính sách đặt tour
               </li>
+              <Link
+                to="/tour-du-lich-khach-doan"
+                className="text-white hover:text-main py-2"
+              >
+                Tour Du lịch khách đoàn
+              </Link>
               <li className="text-white hover:text-main py-2">
                 Chính sách bảo mật
               </li>

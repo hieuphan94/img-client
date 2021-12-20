@@ -1,20 +1,11 @@
-// import API from "../api";
+import API from "./api";
 
-// export const PagesAPI = {
-//   getPageBySlug: async (url) => {
-//     try {
-//       const result = await API.get(url);
-//       return result.data;
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   },
-//   getAllPage: async (url) => {
-//     try {
-//       const result = await API.get(url);
-//       return result.data;
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   },
-// };
+export const PageAPI = {
+  getPage: async (url) => {
+    try {
+      return await API.get("/page/" + url);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+};

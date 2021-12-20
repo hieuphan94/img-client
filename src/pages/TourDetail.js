@@ -28,11 +28,11 @@ export const TourDetail = ({ tour }) => {
           <div className="font-light text-paraGraph px-3">
             {parse(tour.summary)}
           </div>
-          <div>{tour.category}</div>
           <div>
+            <h1>Chương trình tour</h1>
             {tour.timeline.map((e) => {
               return (
-                <div className="flex">
+                <div className="">
                   <h3>{e.title}</h3>
                   <p>{e.description}</p>
                 </div>

@@ -15,7 +15,7 @@ export const TourDetail = ({ tour }) => {
   //   })();
   // }, []);
   console.log(tour);
-  console.log(tour.summary);
+
   return (
     <div>
       <Header />
@@ -31,7 +31,12 @@ export const TourDetail = ({ tour }) => {
           <div>{tour.category}</div>
           <div>
             {tour.timeline.map((e) => {
-              return <div>{e.title}</div>;
+              return (
+                <div className="flex">
+                  <h3>{e.title}</h3>
+                  <p>{e.description}</p>
+                </div>
+              );
             })}
           </div>
           <RelatedTour />
